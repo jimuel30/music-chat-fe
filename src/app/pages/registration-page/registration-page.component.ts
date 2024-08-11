@@ -3,6 +3,7 @@ import {TextInputComponent} from "../../components/text-input/text-input.compone
 import {TextInputConfig} from "../../domain/TextInputConfig";
 import {DateInputConfig} from "../../domain/DateInputConfig";
 import {DateInputComponent} from "../../components/date-input/date-input.component";
+import {RegisterRequest} from "../../domain/RegisterRequest";
 
 @Component({
   selector: 'app-registration-page',
@@ -15,6 +16,23 @@ import {DateInputComponent} from "../../components/date-input/date-input.compone
   styleUrl: './registration-page.component.scss'
 })
 export class RegistrationPageComponent {
+
+
+
+  panelSlide = 1;
+
+  registerRequest:RegisterRequest={
+    userName: "",       // Removed 'private' keyword as it's not used in TypeScript interfaces
+    firstName: "",
+    middleName: "",    // Marked as optional with '?'
+    lastName: "",
+    email: "",
+    password: "",
+    confirmPassword: "",
+    gender: "",         // Assuming 'Gender' is another interface or enum defined elsewhere
+    birthDate: new Date(),
+  }
+
 
   firstNameInputConfig:TextInputConfig={
     label:"First Name",
@@ -37,7 +55,6 @@ export class RegistrationPageComponent {
     placeHolder:"Username",
     type:"text"
   }
-
 
   emailInputConfig:TextInputConfig={
     label:"Email",
@@ -66,6 +83,38 @@ export class RegistrationPageComponent {
     const today = new Date();
     return  new Date(today.setFullYear(today.getFullYear() - 18));
   }
+
+  goBackPreviousPanel(){
+    const isFirstSlide = this.panelSlide==1
+    this.panelSlide = isFirstSlide?1:this.panelSlide-1;
+    if (!isFirstSlide){
+      //TODO SLIDE BACK
+    }
+  }
+
+  slidePanelHandler() {
+    const isLastSlide = this.panelSlide == 2;
+    this.panelSlide = isLastSlide ? this.panelSlide : this.panelSlide + 1;
+
+    if(isLastSlide){
+      //TODO CALL REGISTER ENDPOINT
+    }else {
+      //TODO VALIDATE INPUT OF CURRENT PANEL
+      //TODO SLIDE FORWARD
+    }
+  }
+
+  callAuthenticationApi(){
+
+  }
+
+
+
+
+
+
+
+
 
 
 
