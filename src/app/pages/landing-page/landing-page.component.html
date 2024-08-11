@@ -7,15 +7,13 @@
       Get started by linking your Spotify account and let the good vibes roll!<br>
     </p>
     <div class="col-12 d-flex flex-column justify-content-center align-items-center" id="login-register">
-      <div class="col-12 pb-2">
-        <app-register-button></app-register-button>
+      <div class="col-12 pb-2 d-flex flex-column gap-1">
+           <app-generic-button [buttonText]="'REGISTER NOW'"></app-generic-button>
+            <app-generic-button [buttonText]="'LOGIN VIA EMAIL'"></app-generic-button>
       </div>
       <div class="col-12  d-flex flex-column gap-2" id="login-buttons">
-        <label  class="text-light text-center col-12">- OR LOGIN VIA -</label>
+        <label  class="text-light text-center col-12">- CONTINUE WITH -</label>
       <div class="col-12 d-flex p-0 align-items-center justify-content-center">
-        <section class="col-3 col-md-4 col-xxl-4 col-xl-4 p-1 d-flex">
-          <app-login-button class="col-12" [buttonConfig]="emailLoginConfig" ></app-login-button>
-        </section>
         <section class="col-3 col-md-4 col-xxl-4 col-xl-4 p-1 d-flex">
           <app-login-button class="col-12" [buttonConfig]="googleLoginConfig"></app-login-button>
         </section>

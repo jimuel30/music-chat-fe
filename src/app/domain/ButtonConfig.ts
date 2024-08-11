@@ -3,4 +3,5 @@ export interface ButtonConfig{
   label:String;
   bgColor:String;
   isLoading:boolean;
+  enabled:boolean
 }

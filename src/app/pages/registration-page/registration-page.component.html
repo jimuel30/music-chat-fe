@@ -1,0 +1,36 @@
+<div class="col-12 d-flex align-items-center flex-column  d-flex flex-column justify-content-center align-items-center" id="registration-page">
+  <form class="col-11 col-xxl-3 col-xl-5 col-md-5 p-4">
+
+    <div class="col-12 d-flex" id="panel-wrapper">
+
+      <section class="col-12 pt-1 pb-3 d-flex flex-column gap-5" id="info-panel">
+        <app-date-input [dateInputConfig]="birthDateInputConfig"></app-date-input>
+      </section>
+
+
+
+
+      <section class="col-12 pt-1 pb-3 d-flex flex-column gap-5" id="name-panel">
+        <app-text-input [textInputConfig]="firstNameInputConfig"></app-text-input>
+        <app-text-input [textInputConfig]="middleNameInputConfig"></app-text-input>
+        <app-text-input [textInputConfig]="lastNameInputConfig"></app-text-input>
+      </section>
+
+      <section class="col-12 pt-1 pb-3 d-flex flex-column gap-5" id="credential-panel">
+        <app-text-input [textInputConfig]="emailInputConfig"></app-text-input>
+        <app-text-input [textInputConfig]="userNameInputConfig"></app-text-input>
+        <app-text-input [textInputConfig]="passwordInputConfig"></app-text-input>
+        <app-text-input [textInputConfig]="confirmPasswordInputConfig"></app-text-input>
+      </section>
+
+
+    </div>
+
+
+
+    <section CLASS="col-12 d-flex justify-content-between pt-5" id="register-buttons">
+      <button  class="col-5 col-xl-4 col-xxl-4 p-2">PREVIOUS</button>
+      <button class="col-5 col-xl-4 col-xxl-4 p-2">NEXT</button>
+    </section>
+  </form>
+</div>
