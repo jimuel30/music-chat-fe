@@ -1,0 +1,8 @@
+<section class="col-12 p-2 d-flex align-items-center gap-1"
+         [id]="buttonConfig.isLoading ? 'login-button-loading' : 'login-button'"
+         (click)="setLoading()"
+         [ngStyle]="{'background-color': buttonConfig.bgColor}">
+  <i [class]="buttonConfig.isLoading?loadingIcon:buttonConfig.icon" style="color: white"></i>
+  <label class="text-light">{{buttonConfig.isLoading?' Loading ':buttonConfig.label}}</label>
+</section>
+<!--<i class="fa-solid fa-compact-disc fa-spin"></i>-->
