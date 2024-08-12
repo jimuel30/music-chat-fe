@@ -4,6 +4,8 @@ import {TextInputConfig} from "../../domain/TextInputConfig";
 import {DateInputConfig} from "../../domain/DateInputConfig";
 import {DateInputComponent} from "../../components/date-input/date-input.component";
 import {RegisterRequest} from "../../domain/RegisterRequest";
+import {RegistrationUtil} from "../../utils/RegistrationUtil";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-registration-page',
@@ -17,7 +19,7 @@ import {RegisterRequest} from "../../domain/RegisterRequest";
 })
 export class RegistrationPageComponent {
 
-
+  constructor(private router: Router) {}
 
   panelSlide = 1;
 
@@ -33,74 +35,26 @@ export class RegistrationPageComponent {
     birthDate: new Date(),
   }
 
-
-  firstNameInputConfig:TextInputConfig={
-    label:"First Name",
-    placeHolder:"Your first Name",
-    type:"text"
-  }
-  middleNameInputConfig:TextInputConfig={
-    label:"Middle Name",
-    placeHolder:"Your Middle Name",
-    type:"text"
-  }
-  lastNameInputConfig:TextInputConfig={
-    label:"Last Name",
-    placeHolder:"Your Last Name",
-    type:"text"
-  }
-
-  userNameInputConfig:TextInputConfig={
-    label:"Username",
-    placeHolder:"Username",
-    type:"text"
-  }
-
-  emailInputConfig:TextInputConfig={
-    label:"Email",
-    placeHolder:"Password Here",
-    type:"Email"
-  }
-
-  passwordInputConfig:TextInputConfig={
-    label:"Password",
-    placeHolder:"Password Here",
-    type:"Password"
-  }
-
-  confirmPasswordInputConfig:TextInputConfig={
-    label:"Confirm Password",
-    placeHolder:"Confirm Password Here",
-    type:"Password"
-  }
-
-  birthDateInputConfig:DateInputConfig={
-    label:"Birth Date",
-     specifiedDate:this.getDate18yearsAgo()
-  }
-
-  getDate18yearsAgo(){
-    const today = new Date();
-    return  new Date(today.setFullYear(today.getFullYear() - 18));
-  }
-
-  goBackPreviousPanel(){
+  goPreviousPanel(){
     const isFirstSlide = this.panelSlide==1
     this.panelSlide = isFirstSlide?1:this.panelSlide-1;
     if (!isFirstSlide){
-      //TODO SLIDE BACK
+      RegistrationUtil.slide(this.panelSlide)
+    }
+    else{
+      this.router.navigate(['/']);
     }
   }
 
-  slidePanelHandler() {
-    const isLastSlide = this.panelSlide == 2;
+  goNextPanelHandler() {
+    const isLastSlide = this.panelSlide == 3;
     this.panelSlide = isLastSlide ? this.panelSlide : this.panelSlide + 1;
 
     if(isLastSlide){
       //TODO CALL REGISTER ENDPOINT
+      console.log("CALLING API...")
     }else {
-      //TODO VALIDATE INPUT OF CURRENT PANEL
-      //TODO SLIDE FORWARD
+      RegistrationUtil.slide(this.panelSlide)
     }
   }
 
@@ -109,13 +63,5 @@ export class RegistrationPageComponent {
   }
 
 
-
-
-
-
-
-
-
-
-
+  protected readonly RegistrationUtil = RegistrationUtil;
 }

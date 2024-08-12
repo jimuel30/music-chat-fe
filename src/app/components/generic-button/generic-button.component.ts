@@ -10,5 +10,15 @@ import {Component, Input} from '@angular/core';
 export class GenericButtonComponent {
 
   @Input() buttonText!:String;
+  @Input() voidFunction!: () => void;
+
+
+  clickHandler(){
+    this.voidFunction();
+  }
+
+
+
+
 
 }

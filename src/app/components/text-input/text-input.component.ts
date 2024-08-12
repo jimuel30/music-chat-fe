@@ -1,10 +1,13 @@
 import {Component, Input} from '@angular/core';
 import {TextInputConfig} from "../../domain/TextInputConfig";
+import {FormsModule} from "@angular/forms";
 
 @Component({
   selector: 'app-text-input',
   standalone: true,
-  imports: [],
+  imports: [
+    FormsModule
+  ],
   templateUrl: './text-input.component.html',
   styleUrl: './text-input.component.scss'
 })

@@ -3,6 +3,7 @@ import {BannerImageComponent} from "../../components/banner-image/banner-image.c
 import {LoginButtonComponent} from "../../components/login-button/login-button.component";
 import {ButtonConfig} from "../../domain/ButtonConfig";
 import {GenericButtonComponent} from "../../components/generic-button/generic-button.component";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-landing-page',
@@ -16,6 +17,8 @@ import {GenericButtonComponent} from "../../components/generic-button/generic-bu
   styleUrl: './landing-page.component.scss'
 })
 export class LandingPageComponent {
+
+  constructor(private router: Router) {}
 
 
 
@@ -51,8 +54,16 @@ export class LandingPageComponent {
   toggleAllLoginButtons(){
     this.spotifyLoginConfig.enabled = !this.spotifyLoginConfig.enabled;
     this.googleLoginConfig.enabled = ! this.googleLoginConfig.enabled;
-
   }
+
+  redirectToRegisterHandler(){
+    this.router.navigate(['/register']);
+  }
+
+
+
+
+
 
 
 }
