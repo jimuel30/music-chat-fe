@@ -11,16 +11,15 @@
            <app-generic-button [buttonText]="'Register Now'" [voidFunction]="redirectToRegisterHandler.bind(this)"></app-generic-button>
             <app-generic-button [buttonText]="'Login Via Email'"></app-generic-button>
       </div>
-      <div class="col-12  d-flex flex-column gap-2" id="login-buttons">
+      <div class="col-12  col-md-8  d-flex flex-column gap-2 justify-content-center" id="login-buttons">
         <label  class="text-light text-center col-12">- OR CONTINUE WITH -</label>
-      <div class="col-12 d-flex p-0 align-items-center justify-content-center">
-        <section class="col-3 col-md-4 col-xxl-4 col-xl-4 p-1 d-flex">
-          <app-login-button class="col-12" [buttonConfig]="googleLoginConfig"></app-login-button>
+      <div class="col-12  d-flex p-0 align-items-center justify-content-center">
+        <section class="col-6  p-1" id="google-section">
+          <app-login-button class="col-12 d-flex justify-content-end" [buttonConfig]="googleLoginConfig"></app-login-button>
         </section>
-        <section class="col-3 col-md-4 col-xxl-4 col-xl-4 p-1 d-flex">
-          <app-login-button class="col-12" [buttonConfig]="spotifyLoginConfig"></app-login-button>
+        <section class="col-6 p-1">
+          <app-login-button class="col-12 d-flex " [buttonConfig]="spotifyLoginConfig"></app-login-button>
         </section>
-
       </div>
       </div>
     </div>
