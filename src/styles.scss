@@ -39,7 +39,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif;
 }
 @media (max-width: 1024px) {
   :root {
-    --small-font: clamp(15px, 1.3vh + 0.3rem, 25px); // Default font size
+    --small-font: clamp(15px, 1.3vh + 0.3rem, 22px); // Default font size
     --medium-font: 25x; // Default font size
     --large-font: 25px; // Default font size
   }
