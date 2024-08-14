@@ -14,12 +14,10 @@ import {ButtonConfig} from "../../domain/ButtonConfig";
 export class LoginButtonComponent {
 
   @Input() buttonConfig!:ButtonConfig;
-  loadingIcon = "fa-solid fa-compact-disc fa-spin";
 
 
-  setLoading(){
-    this.buttonConfig.isLoading = true;
-  }
+
+
 
 
 
