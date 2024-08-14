@@ -30,10 +30,10 @@
 
 @media (max-width: 768px) { /* Adjust the width as needed for your definition of mobile */
 
-  #login-button, #login-button-loading
-  {
-    max-width: 30vw;
-  }
+  //#login-button, #login-button-loading
+  //{
+  //  max-width: 40vw;
+  //}
 
     #login-button, #login-button-loading {
       aspect-ratio: 2 / 1; /* Maintains a square aspect ratio */
