@@ -1,0 +1,17 @@
+#feed-section{
+  max-height: 98vh;
+  height: 98vh;
+
+}
+#start-button{
+  font-weight: bold;
+  padding-top: 0.7rem;
+  padding-bottom: 0.7rem;
+  font-size: var(--button-font);
+  min-width: 300px;
+  border: none;
+  background-color: var(--main-color);
+  border-radius: 25px;
+  color: black;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}

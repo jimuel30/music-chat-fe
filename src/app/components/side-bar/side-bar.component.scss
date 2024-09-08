@@ -1,0 +1,16 @@
+#side-bar{
+  background-color: var(--secondary-form-bg-color);
+  max-height: 100vh;
+  height: 100vh;
+}
+
+
+#my-feed{
+  background-image: url("https://upload.wikimedia.org/wikipedia/en/9/9b/After_Laughter_Paramore_album_cover.png");
+  background-size: cover; /* Ensures the image covers the element */
+  background-position: center; /* Centers the image */
+  aspect-ratio: 1 / 1; /* Maintains a 1:1 aspect ratio */
+  border-radius: 10%;
+  cursor: pointer;
+}
+

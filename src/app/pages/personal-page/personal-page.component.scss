@@ -1,0 +1,19 @@
+#personal-page{
+  background-color: var(--form-bg-color);
+  max-width: 100vw;
+  overflow-y: hidden;
+}
+.custom-side-bar{
+  width: 6%;
+}
+
+
+@media only screen and (min-width: 1024px){
+  #side-bar-wrapper{
+    width: 4%;
+
+  }
+  #feed-section-wrapper{
+    width: 96%;
+  }
+}
