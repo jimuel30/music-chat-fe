@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import {AuthButtonComponent} from "../auth-button/auth-button.component";
+import {ButtonsConstant} from "../../constants/ButtonsConstant";
 
 @Component({
   selector: 'app-auth-login-buttons',
@@ -12,4 +13,6 @@ import {AuthButtonComponent} from "../auth-button/auth-button.component";
 })
 export class AuthLoginButtonsComponent {
 
+
+  protected readonly ButtonsConstant = ButtonsConstant;
 }
