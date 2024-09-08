@@ -1,3 +1,41 @@
 #login-form{
   background-color: var(--form-bg-color);
+  border-radius: 10px;
+}
+#login-form h1, #main-icon{
+  color:white;
+  font-size: var(--large-font);
+}
+#login-button{
+  font-weight: bold;
+  padding-top: 0.7rem;
+  padding-bottom: 0.7rem;
+  font-size: var(--button-font);
+  min-width: 300px;
+  border: none;
+  background-color: var(--main-color);
+  border-radius: 25px;
+  color: black;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+#login-button:hover{
+  background-color: #3be477;
+  font-weight: bolder;
+}
+#links-section a{
+  color: white;
+  font-weight: bolder;
+
+}
+#links-section a, #links-section label{
+  font-size: var(--medium-font);
+}
+@media only screen and (max-width: 1000px){
+  #login-page{
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    background-color: var(--form-bg-color);
+    padding: 0;
+  }
 }

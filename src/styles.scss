@@ -8,26 +8,36 @@ html, body {
   min-height: 100vh;
   max-height: 100vh;
   background-color: black;
-  overflow: hidden;
-
+  overflow-y: auto;
+  overflow-x: hidden;
 
 }
 
 html{
   font-size: 16px;
+  overflow: hidden;
 }
 
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif;
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
   font-size: 1rem;
   background: linear-gradient(to bottom, #262626, #030303);
 
 }
 
 :root {
+  //colors
+  --main-color: #1ed760;
   --form-bg-color: #0a0a0a;
+
+
+  //font sizes
   --button-font: clamp(14px, 1vw + 1rem, 17px);
-  --large-font: clamp(18px, 5vw + 10rem, 100px);
-  --small-font: clamp(18px, 5vw + 10rem, 100px);
+  --large-font: clamp(32px, 1.5vw + 1rem, 45px);
+  --medium-font: clamp(13px, 1vw + 1rem, 15px);
+  --small-font: clamp(10px, 0.8vw + 1rem, 12px);
+
 }
 
 //@media only screen and (max-width: 1024px)  and (min-width: 993px){

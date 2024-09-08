@@ -1,7 +1,7 @@
 import { AuthButtonConfig} from "../domain/IconConfig";
 
 
-class ButtonsConstant{
+export class ButtonsConstant{
   static GoogleConfig: AuthButtonConfig =   {
     icon: "fa-brands fa-google",
     color: "#007bff",
