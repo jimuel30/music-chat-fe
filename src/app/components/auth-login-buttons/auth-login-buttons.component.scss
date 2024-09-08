@@ -1,0 +1,15 @@
+.auth-login-buttons {
+  position: relative; /* Ensures the pseudo-element is positioned relative to this element */
+}
+
+.auth-login-buttons::after {
+  content: ""; /* Necessary for the pseudo-element to appear */
+  position: absolute;
+  bottom: 0; /* Positions the pseudo-element at the bottom of the parent */
+  left: 50%; /* Centers the pseudo-element horizontally */
+  transform: translateX(-50%); /* Adjusts for the left positioning so the border is centered */
+  width: 33%; /* Sets the width of the border to 33% of the parent element */
+  border-bottom: 2px solid white; /* Adds the white border at the bottom */
+}
+
+
