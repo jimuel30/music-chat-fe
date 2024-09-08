@@ -4,7 +4,7 @@ import {TextInputConfig} from "../domain/TextInputConfig";
 export class TextInputConstants{
   static emailInputConfig: TextInputConfig = {
     label: 'Email or username',
-    type: 'email',
+    type: 'text',
     placeHolder: 'Email or username',
     required: true,
     isForPassword: false

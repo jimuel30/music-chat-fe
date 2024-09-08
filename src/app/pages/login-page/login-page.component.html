@@ -3,11 +3,23 @@
   <div class="col-12 col-lg-11 cold-md-11  col-xl-7 col-xxl-5 d-flex flex-column p-4 pt-5 align-items-center" id="login-form">
     <i class="fa-solid fa-icons" id="main-icon"></i>
     <h1 class="text-light col-12 text-center p-2 pb-4 fw-bold">Log in to  Chatify</h1>
+    <app-error-warner *ngIf="errorMessage !== ''" class="col-12 mb-2  d-flex justify-content-center align-items-center" [errorMessage]="errorMessage"></app-error-warner>
+
     <app-auth-login-buttons class="col-12"></app-auth-login-buttons>
     <form class="col-12 d-flex flex-column gap-4 align-items-center pt-5">
-      <app-text-input class="col-12 d-flex justify-content-center" [inputConfig]="TextInputConstants.emailInputConfig"></app-text-input>
-      <app-text-input class="col-12 d-flex justify-content-center" [inputConfig]="TextInputConstants.passwordInputConfig"></app-text-input>
-      <button class="col-12 col-xxl-7 col-lg-5 col-md-5 d-flex gap-1  align-items-center d-flex justify-content-center align-items-center" id="login-button">
+      <app-text-input class="col-12 d-flex justify-content-center"
+                      [inputConfig]="TextInputConstants.emailInputConfig"
+                      (valueChange)="setUserNameOrEmail($event)"
+      ></app-text-input>
+      <app-text-input class="col-12 d-flex justify-content-center"
+                      [inputConfig]="TextInputConstants.passwordInputConfig"
+                      (valueChange)="setPassword($event)"
+      ></app-text-input>
+      <button class="col-12 col-xxl-7 col-lg-5 col-md-5 d-flex gap-1  align-items-center d-flex justify-content-center align-items-center"
+              id="login-button"
+              type="button"
+              (click)="loginHandler()"
+      >
         Log In</button>
     </form>
     <section class="col-12 pt-3 pb-3 d-flex flex-column" id="links-section">

@@ -12,7 +12,7 @@ export class ButtonsConstant{
   static  SpotifyConfig: AuthButtonConfig =   {
     icon: "fa-brands fa-spotify",
     color: "#007bff",
-    name: "Google"
+    name: "Spotify"
   }
 
 
