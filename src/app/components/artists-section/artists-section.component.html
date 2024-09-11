@@ -1,16 +1,16 @@
-<div class="col-12 p-2 p-md-4" id="artists-section">
+<div class="col-124" id="artists-section">
  <section class="col-12">
    <h1 class="text-light">My Picks</h1>
  </section>
-  <div class="col-12 d-flex flex-wrap gap-1 justify-content-evenly justify-content-xl-start justify-content-xxl-start justify-content-lg-start">
-    <div  class="col-12 col-md-5 col-xl-1 col-xxl-1  col-lg-1 p-1">
+  <div class="col-12 d-flex flex-wrap justify-content-start">
+    <div  class="col-12 col-md-6 col-xl-1 col-xxl-1  col-lg-1 p-1">
       <button class="col-12 d-flex flex-column justify-content-center align-items-center" id="add-new-pick">
 <!--        <i class="fa-solid fa-plus"></i>-->
         <label>NEW</label>
       </button>
     </div>
 
-    <app-artist-box *ngFor="let artist of artistList" [artist]="artist" class="col-5 col-xl-1 col-lg-1 col-xxl-1"></app-artist-box>
+    <app-artist-box *ngFor="let artist of artistList" [artist]="artist" class="col-6 col-xl-1 col-lg-1 col-xxl-1"></app-artist-box>
 
   </div>
 </div>
