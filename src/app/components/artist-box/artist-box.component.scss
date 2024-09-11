@@ -1,0 +1,19 @@
+.artist-box{
+  overflow: hidden;
+}
+
+.artist-box section{
+  background-size: cover; /* Ensures the image covers the element */
+  background-position: center; /* Centers the image */
+  aspect-ratio: 1 / 1; /* Maintains a 1:1 aspect ratio */
+  cursor: pointer;
+
+}
+.artist-box label{
+  font-size: var(--medium-font);
+}
+@media only screen and (max-width: 992px) and (min-width: 576px){
+  .artist-box section{
+    aspect-ratio: 6/2;
+  }
+}

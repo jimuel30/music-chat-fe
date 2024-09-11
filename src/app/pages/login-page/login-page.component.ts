@@ -48,10 +48,12 @@ constructor(private apiService:ApiCallerService) {
     this.apiService.postWithoutBearer(UrlConstant.loginUrl, this.loginRequest).subscribe({
       next: (v) => {
           console.log(v.data);
+          localStorage.setItem("refreshToken",JSON.stringify(v.data.refreshToken))
+          localStorage.setItem("jwtToken",JSON.stringify(v.data.jwtToken))
+
           this.errorMessage = ""
       },
       error: (e) => {
-
         console.log(e.error.message)
         this.errorMessage = e.error.message.toString();
       },

@@ -1,0 +1,10 @@
+#task-bar{
+  height: 7vh;
+  //min-height: 10vh;
+  background-color: var(--secondary-form-bg-color);
+  color: white;
+  font-size: var(--button-font);
+}
+#task-bar label{
+  font-size: var(--small-font);
+}

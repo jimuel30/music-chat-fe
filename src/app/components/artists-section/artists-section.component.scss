@@ -1,0 +1,22 @@
+#artists-section h1{
+  font-size: var(--large-font);
+}
+#add-new-pick{
+  aspect-ratio: 1/1 ;
+  border-radius: 5px;
+  font-weight: bold;
+  padding-top: 0.7rem;
+  padding-bottom: 0.7rem;
+  font-size: var(--large-font);
+  border: none;
+  background-color: var(--main-color);
+  color: black;
+}
+#add-new-pick label{
+  font-size: var(--button-font);
+}
+@media only screen and (max-width: 992px) and (min-width: 576px){
+  #add-new-pick{
+    aspect-ratio: 6/2;
+  }
+}

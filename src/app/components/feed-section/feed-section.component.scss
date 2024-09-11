@@ -1,17 +1,45 @@
 #feed-section{
-  max-height: 98vh;
-  height: 98vh;
-
+  //max-height: 9vh;
+  height: 93vh;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  overflow-y: auto;
 }
 #start-button{
   font-weight: bold;
   padding-top: 0.7rem;
   padding-bottom: 0.7rem;
   font-size: var(--button-font);
-  min-width: 300px;
   border: none;
   background-color: var(--main-color);
   border-radius: 25px;
   color: black;
   transition: transform 0.3s ease, background-color 0.3s ease;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+#my-banner{
+    background-image: url("https://upload.wikimedia.org/wikipedia/en/9/9b/After_Laughter_Paramore_album_cover.png");
+    background-size: cover; /* Ensures the image covers the element */
+    background-position: center; /* Centers the image */
+    aspect-ratio: 1 / 1; /* Maintains a 1:1 aspect ratio */
+    cursor: pointer;
+
+}
+#feed-section p{
+  font-size: var(--medium-font);
+}
+#feed-text-area h1{
+  font-size: var(--large-font);
+  font-weight: bolder;
+}
+
+@media only screen and (max-width: 992px){
+  #my-banner{
+    aspect-ratio: 6/2;
+  }
+
+}
+@media only screen and (max-width: 576px){
+  #feed-section p{
+    font-size: var(--small-font);
+  }
 }
