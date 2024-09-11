@@ -19,6 +19,23 @@ export class ApiCallerService {
     );
   }
 
+  postWithBearer(url:string,body:any){
+    const tokenObject = localStorage.getItem("jwtToken");
+    let tokenString = "";
+    if(tokenObject){
+      const jsonObject = JSON.parse(tokenObject);
+      tokenString = jsonObject.token;
+    }
+    const headers = new HttpHeaders({
+      'Authorization': `Bearer ${tokenString}`
+    });
+    return this.http.post<any>(url, body,{ headers }).pipe(
+      map((response: any) => response) // Extract the body here
+    );
+  }
+
+
+
   getWithBearer(url: string) {
 
     const tokenObject = localStorage.getItem("jwtToken");
