@@ -3,11 +3,15 @@
    <h1 class="text-light">My Picks</h1>
  </section>
   <div class="col-12 d-flex flex-wrap justify-content-start">
-    <div  class="col-12 col-md-6 col-xl-1 col-xxl-1  col-lg-1 p-1">
-      <button class="col-12 d-flex flex-column justify-content-center align-items-center" id="add-new-pick">
-<!--        <i class="fa-solid fa-plus"></i>-->
-        <label>NEW</label>
-      </button>
+    <div  class="col-6 col-md-6 col-xl-1 col-xxl-1  col-lg-1 p-1" id="add-new-pick-container">
+        <button class="col-12 d-flex flex-column justify-content-center align-items-center" id="add-new-pick">
+          <!--        <i class="fa-solid fa-plus"></i>-->
+          <label>
+            ADD <br>
+            NEW <br>
+            ARTIST
+          </label>
+        </button>
     </div>
 
     <app-artist-box *ngFor="let artist of artistList" [artist]="artist" class="col-6 col-xl-1 col-lg-1 col-xxl-1"></app-artist-box>

@@ -5,42 +5,32 @@
   width: max-content;
   font-weight: bolder;
 }
-#add-new-pick{
-
-
-  font-weight: bold;
+#add-new-pick {
+  font-weight: 800;
   padding-top: 0.7rem;
   padding-bottom: 0.7rem;
   font-size: var(--large-font);
-
-
-  background-color: transparent;
-  color:white;
-  border-width: 2.5px;
-  border-style: dashed;
+  background-color: var(--gray-bg-color);
+  color: white;
   border-radius: 10px;
-  border-color: white;
+  aspect-ratio: 1/1;
+  cursor: pointer;
+  border: none;
+
+}
 
 
+
+#add-new-pick:hover{
+  color: black;
+  background-color: var(--main-color);
+  border: none;
 }
 #add-new-pick label{
   font-size: var(--button-font);
 }
-@media only screen and (max-width: 576px){
-  #add-new-pick{
-    border: none;
-    background-color: var(--main-color);
-    color: black;
-    border-radius: 5px;
-  }
-}
 @media only screen and (min-width: 768px) and (max-width: 1000px){
   #add-new-pick{
     aspect-ratio: 6/2;
-  }
-}
-@media only screen and (min-width: 1001px){
-  #add-new-pick{
-    aspect-ratio: 1/1 ;
   }
 }
