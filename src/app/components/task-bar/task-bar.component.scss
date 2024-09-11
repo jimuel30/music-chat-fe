@@ -4,6 +4,8 @@
   background-color: var(--secondary-form-bg-color);
   color: white;
   font-size: var(--button-font);
+  position: fixed;
+  bottom: 0;
 }
 #task-bar label{
   font-size: var(--small-font);
