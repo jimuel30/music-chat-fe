@@ -1,0 +1,27 @@
+#search-bar{
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+#search-bar input{
+  background-color: rgba(255, 255, 255, 0.16);
+  border-radius: 5px;
+  border: 1px solid transparent; /* Optional: Use a transparent border */
+  outline: none; /* Remove the outline on focus */
+  font-weight: bolder;
+}
+
+#search-bar section{
+  margin-left: 5px;
+  cursor: pointer;
+}
+
+#search-bar i{
+  font-size: var(--button-font);
+  color:black;
+  height: 100%;
+  background-color: var(--main-color);
+  font-weight: bolder;
+  border-radius: 5px;
+  cursor: pointer;
+
+}
+

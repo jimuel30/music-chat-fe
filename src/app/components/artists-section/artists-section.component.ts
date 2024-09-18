@@ -3,7 +3,8 @@ import {ApiCallerService} from "../../services/api-caller.service";
 import {Artist} from "../../domain/Artist";
 import {UrlConstant} from "../../constants/UrlConstant";
 import {ArtistBoxComponent} from "../artist-box/artist-box.component";
-import {NgForOf} from "@angular/common";
+import {NgForOf, NgIf} from "@angular/common";
+import {AddPickFormComponent} from "../add-pick-form/add-pick-form.component";
 
 
 @Component({
@@ -11,7 +12,9 @@ import {NgForOf} from "@angular/common";
   standalone: true,
   imports: [
     ArtistBoxComponent,
-    NgForOf
+    NgForOf,
+    AddPickFormComponent,
+    NgIf
   ],
   templateUrl: './artists-section.component.html',
   styleUrl: './artists-section.component.scss'
@@ -20,11 +23,24 @@ export class ArtistsSectionComponent implements OnInit{
 
    artistList!:Artist[];
 
+   showAddPickForm: boolean = false;
+
+
+
+
+
+
   constructor(private apiService:ApiCallerService) {
   }
   ngOnInit(): void {
      this.getArtistsHandler();
   }
+
+  toggleAddPickForm(): void {
+    this.showAddPickForm = !this.showAddPickForm;
+  }
+
+
 
 
 

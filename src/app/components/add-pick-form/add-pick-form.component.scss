@@ -1,0 +1,26 @@
+#add-pick{
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.84);
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+
+
+}
+#add-pick form{
+  background-color: black;
+  min-height: 95vh;
+  border-radius: 10px;
+  box-shadow: rgba(57, 57, 57, 0.04) 0px 8px 24px;
+}
+
+#add-pick h1{
+  font-size: var(--large-font);
+  font-weight: bolder;
+}
+#add-pick i{
+  font-size: var(--button-font);
+  cursor: pointer;
+  //background-color: green;
+}
