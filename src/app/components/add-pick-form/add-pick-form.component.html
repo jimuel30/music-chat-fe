@@ -4,7 +4,24 @@
        <h1 class="text-light col-6">New Artist</h1>
      </section>
       <section class="col-12">
-        <app-search-bar class="col-12"></app-search-bar>
+        <app-search-bar class="col-12" (searchEvent)="searchHandler($event)"></app-search-bar>
+      </section>
+
+     <div class="col-12 d-flex flex-row  artist-info-wrapper">
+       <div class="col-12 d-flex flex-row flex-wrap artist-search-wrapper">
+         <app-artist-info class="col-12"></app-artist-info>
+       </div>
+
+       <div class="col-12 d-flex flex-row flex-wrap artist-search-wrapper">
+         <app-search-result-card *ngFor="let artist of searchResult" [artist]="artist" class="col-6 col-xl-3 col-lg-6 col-xxl-2 col-md-4"></app-search-result-card>
+       </div>
+
+     </div>
+
+
+
+      <section class="col-12 col-lg-5 col-xxl-2 col-xl-2 d-flex justify-content-center align-items-center">
+        <button class="col-12">CANCEL</button>
       </section>
 
   </form>

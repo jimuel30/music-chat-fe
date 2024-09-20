@@ -24,3 +24,23 @@
   cursor: pointer;
   //background-color: green;
 }
+#add-pick button{
+  font-weight: 800;
+  padding-top: 0.7rem;
+  padding-bottom: 0.7rem;
+  font-size: var(--medium-font);
+  background-color: var(--gray-bg-color);
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  border: none;
+}
+.artist-search-wrapper{
+  max-height: 70vh;
+  overflow: hidden;
+  overflow-y: scroll;
+}
+.artist-info-wrapper{
+  overflow: hidden;
+  //overflow-x:scroll;
+}

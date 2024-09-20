@@ -1,7 +1,7 @@
 <div class="col-12 d-flex" id="search-bar">
-  <input class="col-10 text-light p-2" type="text" placeholder="Search...">
+  <input class="col-10 col-md-11 col-xxl-11 text-light p-2" type="text" placeholder="Search..." [(ngModel)]="artistName">
   <section class="col-2  col-xl-1 col-xxl-1 col-lg-1 col-md-1">
-    <i class="fa-solid fa-magnifying-glass  d-flex justify-content-center align-items-center col-12 col-6 col-xl-6 col-xxl-6"></i>
+    <i class="fa-solid fa-magnifying-glass  d-flex justify-content-center align-items-center col-12 col-6 col-xl-6 col-xxl-6" (click)="triggerSearch()"></i>
   </section>
 
 </div>

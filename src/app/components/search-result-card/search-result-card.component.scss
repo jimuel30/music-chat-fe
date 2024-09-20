@@ -1,0 +1,17 @@
+.search-result-card{
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.search-result-card section{
+  aspect-ratio: 1/1;
+  background-size: cover; /* Ensures the image covers the element */
+  background-position: center; /* Centers the image */
+  cursor: pointer;
+}
+
+.artist-name{
+  font-size: var(--medium-font);
+  font-weight: bolder;
+}
+
+

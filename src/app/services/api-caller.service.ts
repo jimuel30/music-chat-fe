@@ -35,6 +35,16 @@ export class ApiCallerService {
   }
 
 
+  getWithoutBearer(url: string) {
+    const headers = new HttpHeaders({});
+
+    return this.http.get<any>(url, { headers }).pipe(
+      map((response: any) => response) // Extract the body here
+    );
+  }
+
+
+
 
   getWithBearer(url: string) {
 
