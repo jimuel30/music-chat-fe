@@ -5,7 +5,7 @@
   width: max-content;
   font-weight: bolder;
 }
-#add-new-pick {
+.add-new-pick {
   font-weight: 800;
   padding-top: 0.7rem;
   padding-bottom: 0.7rem;
@@ -19,18 +19,11 @@
 
 }
 
-
-
-//#add-new-pick:hover{
-//  color: black;
-//  background-color: var(--main-color);
-//  border: none;
-//}
-#add-new-pick label{
+.add-new-pick label{
   font-size: var(--button-font);
 }
 @media only screen and (min-width: 768px) and (max-width: 1000px){
-  #add-new-pick{
+  .add-new-pick{
     aspect-ratio: 6/2;
   }
 }

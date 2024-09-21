@@ -28,8 +28,6 @@ export class ArtistsSectionComponent implements OnInit{
 
 
 
-
-
   constructor(private apiService:ApiCallerService) {
   }
   ngOnInit(): void {
@@ -38,6 +36,10 @@ export class ArtistsSectionComponent implements OnInit{
 
   toggleAddPickForm(): void {
     this.showAddPickForm = !this.showAddPickForm;
+  }
+
+  hideAddPickForm(show:boolean){
+    this.showAddPickForm = show;
   }
 
 

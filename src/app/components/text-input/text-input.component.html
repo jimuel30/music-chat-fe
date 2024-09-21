@@ -1,11 +1,11 @@
-<div class="col-12 col-xxl-7 col-lg-5 col-md-5 d-flex flex-column gap-1" id="text-input">
+<div class="col-12 col-xxl-7 col-lg-5 col-md-5 d-flex flex-column gap-1 text-input">
   <label>{{inputConfig.label}}</label>
   <input [type]="inputConfig.type"
-         class="col-12"
+         class="col-12 text-input-normal"
          *ngIf="!inputConfig.isForPassword"
          [(ngModel)]="inputValue"
          (ngModelChange)="onInputChange()"
-         id="text-input-normal"/>
+         />
   <div id="password-section" [ngClass]="{'active-input': isActive}" *ngIf="inputConfig.isForPassword">
     <input [type]="showPassword ? 'text' : 'password'"
            class="col-11"

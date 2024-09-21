@@ -16,7 +16,7 @@
   transition: transform 0.3s ease, background-color 0.3s ease;
   font-family: Roboto, "Helvetica Neue", sans-serif;
 }
-#my-banner{
+.my-banner{
     background-image: url("https://upload.wikimedia.org/wikipedia/en/9/9b/After_Laughter_Paramore_album_cover.png");
     background-size: cover; /* Ensures the image covers the element */
     background-position: center; /* Centers the image */
@@ -33,7 +33,7 @@
 }
 
 @media only screen and (max-width: 992px){
-  #my-banner{
+  .my-banner{
     aspect-ratio: 6/2;
   }
 

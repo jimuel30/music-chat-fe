@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {NgForOf, NgStyle} from "@angular/common";
 import {ArtistObject} from "../../domain/ArtistSearchObject";
 
@@ -16,6 +16,17 @@ import {ArtistObject} from "../../domain/ArtistSearchObject";
 export class SearchResultCardComponent implements OnInit{
   @Input() artist!:ArtistObject;
   imageUrl = "https://i.scdn.co/image/ab67616100005174b10c34546a4ca2d7faeb8865";
+
+
+  @Output() selectEvent  = new EventEmitter<ArtistObject>();
+
+
+  triggerSelect(){
+    this.selectEvent.emit(this.artist)
+  }
+
+
+
 
   ngOnInit(): void {
     this.imageUrl = this.artist.images[0].url;
