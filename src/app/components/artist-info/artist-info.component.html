@@ -1,13 +1,14 @@
 <div class="col-12 d-flex flex-column artist-info align-items-center" [ngStyle]="{'background-image': 'url(' + artist.images[0].url + ')'}"  >
   <div class="col-12 d-flex flex-column  align-items-center gradient">
     <h1 class="text-light col-11 pt-3 pt-xl-5 pt-xxl-5">{{artist.name.toUpperCase()}}</h1>
-    <section class="col-11 d-flex flex-row flex-wrap gap-2">
-      <label *ngFor="let genre of artist.genres" class="text-light p-2">{{genre}}</label>
-    </section>
-    <section class="col-11 p-2 mt-3 d-flex flex-row flex-wrap gap-1 align-items-center">
+    <section class="col-11 pb-2 mt-3 d-flex flex-row flex-wrap gap-1 align-items-center">
       <button class="col-5 col-xl-3 col-xxl-3 col-lg-3 add " type="button" (click)="addToPickHandler()">ADD</button>
       <button class="col-5 col-xl-3 col-xxl-3 col-lg-3 back-to-search" type="button" (click)="returnToSearchHandler()">BACK</button>
     </section>
+    <section class="col-11 d-flex flex-row flex-wrap gap-2">
+      <label *ngFor="let genre of artist.genres" class="text-light p-2">{{genre}}</label>
+    </section>
+
 
 
   </div>
